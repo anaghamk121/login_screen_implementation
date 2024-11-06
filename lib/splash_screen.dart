@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:login_screen/login_screen.dart';
 
 class Splash extends StatefulWidget {
   @override
@@ -11,9 +12,9 @@ class Splash extends StatefulWidget {
 class _SplashState extends State<Splash> {
   void initState() {
     Timer(const Duration(seconds: 5), () {
-      // Navigator.pushReplacement(
-      //     context,
-      //     MaterialPageRoute(builder: (context) => MyApp()));
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => loginscreen()));
     });
     super.initState();
   }
@@ -23,7 +24,7 @@ class _SplashState extends State<Splash> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: SvgPicture.asset("asset/Layer_1image.svg",height: 100,width: 100,),
+        child: SvgPicture.asset("asset/Layer_1image.svg",height: 100,width: 60,),
       ),
     );
   }
